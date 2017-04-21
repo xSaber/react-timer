@@ -21,10 +21,10 @@ export default class Header extends Component {
                 <Navbar.Collapse>
                     <Nav>
                         <LinkContainer exact to="/" activeClassName="active">
-                            <NavItem eventKey={2}>Timer</NavItem>
+                            <NavItem eventKey={1}>Timer</NavItem>
                         </LinkContainer>
                         <LinkContainer to="/countdown" activeClassName="active">
-                            <NavItem eventKey={3}>Countdown</NavItem>
+                            <NavItem eventKey={2}>Countdown</NavItem>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
