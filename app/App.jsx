@@ -3,6 +3,7 @@ import React from 'react';
 // include bootstrap styles
 import 'Assets/styles/bootstrap.css';
 import 'Assets/styles/bootstrap-theme.css';
+import 'Assets/styles/styles.scss';
 
 import Header from './components/Header';
 import Scenes from './scenes';

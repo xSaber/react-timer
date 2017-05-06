@@ -9,6 +9,7 @@ import NavItem from 'react-bootstrap/lib/NavItem';
  * Header component, visible on all pages
  */
 export default class Header extends Component {
+
     render () {
         return (
             <Navbar staticTop>

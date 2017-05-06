@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Clock extends Component {
 
@@ -18,11 +19,28 @@ export default class Clock extends Component {
         let seconds = totalSeconds % 60,
             minutes = Math.floor(totalSeconds / 60);
 
+        // slicing here adds trailing '0' for 01:01 like-cases, instead of returning 1:1
         return ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);
     }
 
     render () {
-        return <p>Clock component</p>
+        let { totalSeconds } = this.props;
+
+        return (
+            <div className="clock__display display">
+                <span className="display__indication">
+                    {this.formatSeconds(totalSeconds)}
+                </span>
+            </div>
+        );
     }
 
+}
+
+Clock.defaultProps = {
+    totalSeconds: 0
+}
+
+Clock.propTypes = {
+    totalSeconds: PropTypes.number
 }
